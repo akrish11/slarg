@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
   
   def colophon
+  @title = "Colophon"
   end
 
 end
