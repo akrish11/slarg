@@ -25,7 +25,7 @@ describe PagesController do
   
     it "should have the right title" do
       get 'colophon'
-      response.should have_selector("title", :content => "Slarg | Colophon")
+      response.should have_selector("title", :content => "Slightly Argumentative | Colophon")
     end
   end
 

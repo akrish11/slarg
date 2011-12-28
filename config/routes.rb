@@ -1,5 +1,8 @@
 Slarg::Application.routes.draw do
+
   get "pages/home"
+  
+  match "/", to: 'pages#home', via: "get"
 
   get "pages/contact"
   
