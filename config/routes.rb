@@ -6,6 +6,8 @@ Slarg::Application.routes.draw do
 
   get "pages/contact"
   
+  match "/contact", to: 'pages#contact', via: "get"
+  
   #get "pages/colophon"
   
   match '/colophon', to: 'pages#colophon', via: "get"

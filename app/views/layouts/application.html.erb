@@ -2,13 +2,37 @@
 <html>
 <head>
 <title><%= title %></title>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->  
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
   <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-  <%= csrf_meta_tags %>
+  
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 </head>
+
 <body>
+  
+  <div class="container">
+    
+      <div id="header" class="span-24">
+        <%= link_to(image_tag("slargthree.png", :alt => "Slightly Argumentative", :class => "round"), '/') %>
+      </div>
+      
+      <hr/>
+      
+  <div class="span-20"
+      <%= yield %>
+  </div>
 
-<%= yield %>
+  <div class="span-4 last">
+  <li> Archive</li>
+  <li><%= link_to "Colophon", '/colophon' %></li>
+  <li><%= link_to "Contact", '/contact' %></li>
+  </div>
 
-</body>
+
+
 </html>
