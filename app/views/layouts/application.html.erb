@@ -10,33 +10,33 @@
   <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
   
   <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+
+  <%= stylesheet_link_tag 'pages', :media => 'screen' %>
 </head>
-
-<body>
   
-  <div class="container">
-    
-      <div id="header" class="span-24">
-        <%= link_to(image_tag("slargthree.png", :alt => "Slightly Argumentative", :class => "round"), '/') %>
-      </div>
-      
-      <hr/>
-      
-  <div class="span-20"
-      <%= yield %>
-  </div>
-
-  <div class="span-4 last">
-  <li> Archive</li>
-  <li><%= link_to "Colophon", '/colophon' %></li>
-  <li><%= link_to "Contact", '/contact' %></li>
-  </div>
-
-  <div id="footer" class"span-24">
+<div class="container">
   
+  <div id="header" class="span-24">
+    <%= link_to(image_tag("slargthree.png", :alt => "Slightly Argumentative", :class => "round"), '/') %>
+  </div>
+        
   <hr/>
-
+  
+  <body>      
+    <div class="span-20">
+      <%= yield %>
+    </div>
+  
+    <div id="sidebar" class="span-4 last">
+      <li> Archive</li>
+      <li><%= link_to "Colophon", '/colophon' %></li>
+      <li><%= link_to "Contact", '/contact' %></li>
+    </div>
+  </body>
+  
+  <div id="stickyfooter" class="span-24">
+    <hr/>
+    Copyright &copy 2012 A.K.	
   </div>
 
 </div>
